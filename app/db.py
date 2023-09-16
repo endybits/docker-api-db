@@ -5,10 +5,10 @@ from pymysql.err import OperationalError
 
 def db_connection():
     try:
-        conn = pymysql.connect(\
+        conn = pymysql.connect(
             host=os.environ.get('HOST_DB','localhost'),
             user='root',
-            password=os.environ.get('MYSQL_ROOT_PASSWORD','DEFAULT_PASS'),
+            password=os.environ.get('PASSWORD_DB','DEFAULT_PASS'),
             cursorclass=DictCursor
         )
 
